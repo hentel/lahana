@@ -162,6 +162,17 @@ DNSListenAddress 192.168.42.1
 DNSListenAddress 127.0.0.1
 TransListenAddress 127.0.0.1
 TransListenAddress 192.168.42.1
+SocksPort 0
+ORPort 443 # or some other port if you already run a webserver/skype
+BridgeRelay 1
+Exitpolicy reject *:*
+
+## CHANGEME_1 -> provide a nickname for your bridge, can be anything you like
+Nickname lahana-node
+## CHANGEME_2 -> provide some email address so we can contact you if there's a problem
+ContactInfo devnull@lahana.localhost
+
+ServerTransportPlugin obfs2,obfs3 exec /usr/bin/obfsproxy managed
 EOF
 
 # A restart isn't necessary, but a clean boot proves everything works in
