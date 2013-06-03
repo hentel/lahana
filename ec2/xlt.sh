@@ -168,7 +168,7 @@ BridgeRelay 1
 Exitpolicy reject *:*
 
 ## CHANGEME_1 -> provide a nickname for your bridge, can be anything you like
-Nickname lahana-node
+Nickname lahana
 ## CHANGEME_2 -> provide some email address so we can contact you if there's a problem
 ContactInfo devnull@lahana.localhost
 
