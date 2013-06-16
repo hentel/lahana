@@ -1,9 +1,6 @@
 #!/bin/sh
 
-# Please define your own values for those variables
-IPSEC_PSK=whoop
-VPN_USER=bob
-VPN_PASSWORD=bob
+source $HOME/lahana-master/ec2/config.sh
 
 # Those two variables will be found automatically
 # If you're not using EC2 create a private interface in

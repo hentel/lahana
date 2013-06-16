@@ -1,0 +1,25 @@
+#!/bin/sh
+
+# installs and starts lahana on a fresh ec2 instance.
+
+
+if [ $# != 3 ] ; then
+    echo "Expects 3 arguments, VPN_USER, VPN_PASSWORD, IPSEC_PSK"
+    exit 1;
+fi
+
+sudo apt-get install unzip wget -y
+rm -rf master.zip lahana-master
+wget https://github.com/stevelord/lahana/archive/master.zip
+unzip master.zip
+
+cat > $HOME/lahana-master/ec2/config.sh <<EOF
+#!/bin/sh
+VPN_USER=$1
+VPN_PASSWORD=$2
+IPSEC_PSK=$3
+EOF
+
+sudo lahana-master/ec2/instxlt.sh
+
+
