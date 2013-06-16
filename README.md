@@ -36,7 +36,7 @@ The full guide is at http://lahana.dreamcats.org/, but the basic steps are:
 2. Modify the username, password and secret to suit.
 3. Configure the security group to let TCP, UDP and ICMP in.
 4. Copy the scripts to the instance.
-5. Run instxlt.sh and press return at the prompts.
+5. Modify the credentials at the top of xlt.sh to suit, save it and run sudo instxlt.sh.
 6. Connect via your favourite ipsec/l2tp VPN client.
 
 Problems?
