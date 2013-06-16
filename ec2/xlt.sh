@@ -177,4 +177,4 @@ EOF
 
 # A restart isn't necessary, but a clean boot proves everything works in
 # Case you need to shut down for now and start again later
-sudo shutdown -r now
+shutdown -r now
