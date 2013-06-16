@@ -1,14 +1,12 @@
 #!/bin/sh
 
-sudo cat >> /etc/apt/sources.list <<EOF
+sudo cat >> /etc/apt/sources.list.d/tor <<EOF
 deb     http://deb.torproject.org/torproject.org precise main
-deb     http://deb.torproject.org/torproject.org experimental-precise main
 EOF
-
-sudo gpg --keyserver keys.gnupg.net --recv 886DDD89
-sudo gpg --export A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89 | sudo apt-key add -
+gpg --keyserver keys.gnupg.net --recv 886DDD89
+gpg --export A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89 | sudo apt-key add -
 sudo apt-get update
-sudo apt-get install tor deb.torproject.org-keyring obfsproxy
+sudo apt-get install tor deb.torproject.org-keyring obfsproxy -y
 sudo apt-get upgrade -y
 sudo apt-get install openswan xl2tpd ppp -y
 sudo cp ./xlt.sh /etc/xlt.sh
