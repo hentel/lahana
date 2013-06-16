@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 cd ~/lahana-master
 cat >> /etc/apt/sources.list.d/tor.list <<EOF

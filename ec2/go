@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # installs and starts lahana on a fresh ec2 instance.
 

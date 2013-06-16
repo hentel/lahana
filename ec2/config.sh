@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # Please define your own values for those variables
 IPSEC_PSK=whoop
