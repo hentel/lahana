@@ -172,6 +172,11 @@ ContactInfo devnull@lahana.localhost
 ServerTransportPlugin obfs2,obfs3 exec /usr/bin/obfsproxy managed
 EOF
 
+# Disable rsyslog. I thought a lot about whether to do this or not as it's
+# useful for fixing things but identifies who connected to a node and when
+echo 'manual' > /tmp/rsyslog.override
+mv /tmp/rsyslog.override /etc/init/
+
 # A restart isn't necessary, but a clean boot proves everything works in
 # Case you need to shut down for now and start again later
 shutdown -r now

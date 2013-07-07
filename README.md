@@ -33,10 +33,11 @@ Installing
 The full guide is at http://lahana.dreamcats.org/, but the basic steps are:
 
 1. Launch an Ubuntu 12.04.2 LTS 64-bit micro instance on EC2.
-2. Modify the username, password and secret to suit.
+2. Choose a username, password and secret.
 3. Configure the security group to let TCP, UDP and ICMP in.
-4. Copy the scripts to the instance.
-5. Modify the credentials at the top of xlt.sh to suit, save it and run sudo instxlt.sh.
+4. Execute the following command, replacing VPN_USER, VPN_PASSWORD and IPSEC_PSK with your preferred values:
+	curl -sS https://raw.github.com/stevelord/lahana/master/ec2/go | sh -s VPN_USER VPN_PASSWORD IPSEC_PSK
+5. Hit return on both popups that come up and wait for the reboot.
 6. Connect via your favourite ipsec/l2tp VPN client.
 
 Problems?
